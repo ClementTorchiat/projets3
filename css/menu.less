@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.nav-toggle{
+  /*background-color: crimson;*/
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: fixed;
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+}
+
+.nav-toggle-bar, .nav-toggle-bar::before, .nav-toggle-bar::after{
+  content: "";
+  background-color: white;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  transition: all .4s ease-in-out;
+}
+
+.nav-toggle-circle {
+  content: "";
+  background-color: #4F7E9F;
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  left: 0;
+  transition: all .4s ease-in-out;
+  border-radius: 100px;
+  transform: translateX(-15%);
+}
+
+.nav-toggle-bar::before{
+  top: -10px;
+}
+.nav-toggle-bar::after{
+  top: 10px;
+}
+
+.menu-open .nav-toggle-bar{
+  transform: rotate(135deg);
+  background-color: white;
+}
+
+.menu-open .nav-toggle-circle {
+  background-color: #284B63;
+}
+
+.menu-open .nav-toggle-bar::before, .menu-open .nav-toggle-bar::after{
+  transform: rotate(90deg);
+  background-color: white;
+  top: 0;
+}
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100vw);
+  transition: all .4s;
+  z-index: 1;
+  font-weight: bold;
+  background-color: #F5EDE7;
+  @media screen and (min-width: 800px) {
+    transform: none;
+    position: initial;
+    background-color: transparent;
+  }
+}
+
+.menu-open .menu{
+  transform: translateX(0);
+}
+
+.menu-open, .menu-open body{
+  overflow: hidden;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 2.3rem;
+  @media screen and (min-width: 800px){
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: row;
+    margin-right: 150px;
+  }
+}
+
+.menu li{
+  margin-bottom: 30px;
+  @media screen and (min-width: 800px) {
+    margin-right: 80px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    border-left: white 2px solid;
+    padding-left: 50px;
+  }
+}
+
+.menu a{
+  color: #284B63;
+  @media screen and (min-width: 800px) {
+    color: white;
+  }
+}
+
+.menu-open .menu li{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.menu img{
+  width: 4em;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 80px;
+  @media screen and (min-width: 800px){
+    width: 4vw;
+    position: initial;
+    margin: 10px auto 10px 10px;
+  }
+}
+
+.menu > ul > li > a {
+  font-family: Raleway, sans-serif;
+}
+
+.fond-header {
+  transform: translateX(-9999px);
+  @media screen and (min-width: 800px){
+    width: 101vw;
+    height: 100%;
+    position: relative;
+    transform: translate(-1vw, -6vw);
+    z-index: -10;
+  }
+}
