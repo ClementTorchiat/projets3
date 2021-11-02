@@ -124,6 +124,27 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtzpYCP.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oxygen/v10/2sDcZG1Wl4LcnbuCJW8Dbw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oxygen/v10/2sDfZG1Wl4Lcnbu6iQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oxygen/v10/2sDcZG1Wl4LcnbuCNWgDbw.ttf) format('truetype');
+}
 body {
   overflow-x: hidden;
 }
@@ -323,5 +344,62 @@ h1 {
   text-align: center;
   position: absolute;
   top: 20%;
+}
+#actualités-1 {
+  background-color: #F5EDE7;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 800px) {
+  #actualités-1 {
+    padding-top: 20px;
+  }
+}
+.gauche :first-child {
+  margin: auto;
+}
+@media screen and (min-width: 800px) {
+  .gauche :first-child {
+    padding-left: 50px;
+    padding-top: 20px;
+  }
+}
+#actualités-1 h2 {
+  font-family: Oxygen, sans-serif;
+  font-weight: bold;
+  font-size: 1.875rem;
+  text-align: center;
+  color: #284B63;
+}
+#actualités-1 p {
+  font-family: Raleway, sans-serif;
+  font-size: 1.25rem;
+  line-height: 40px;
+  margin: 40px 44px;
+  text-align: left;
+}
+@media screen and (min-width: 800px) {
+  #actualités-1 p {
+    padding-left: 20px;
+  }
+}
+.voir-plus {
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: white;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #284B63;
+  border-radius: 50px;
+  padding: 15px 80px;
+}
+@media screen and (min-width: 800px) {
+  .flex {
+    display: flex;
+  }
 }
 /*# sourceMappingURL=menu.css.map */
